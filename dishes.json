@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Макарони",
+    "type": "garnish",
+    "unit": "грам",
+    "calories": 130,
+    "portion": 300
+  },
+  {
+    "name": "Гречана каша",
+    "type": "garnish",
+    "unit": "грам",
+    "calories": 160,
+    "portion": 300
+  },
+  {
+    "name": "Картопля варена",
+    "type": "garnish",
+    "unit": "грам",
+    "calories": 74,
+    "portion": 300
+  }
+]
