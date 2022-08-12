@@ -14,6 +14,7 @@
 html {
   color: #222;
   font-size: 1em;
+  font-family: monospace, sans-serif;
   line-height: 1.4;
 }
 
@@ -261,3 +262,22 @@ textarea {
   }
 }
 
+
+.week__day {
+  width: 200px;
+  border: 2px dashed lightslategrey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.week__day-heading {
+  font-size: 36px;
+  background-color: lightgrey;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.week__meal-heading {
+  font-size: 24px;
+  border-bottom: 1px solid lightslategrey;
+}
