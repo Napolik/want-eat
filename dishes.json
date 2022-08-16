@@ -19,5 +19,47 @@
     "unit": "грам",
     "calories": 74,
     "portion": 300
+  },
+  {
+    "name": "Яйця смажені",
+    "type": "main",
+    "unit": "грам",
+    "calories": 196,
+    "portion": 100
+  },
+  {
+    "name": "Котлети курячі",
+    "type": "main",
+    "unit": "грам",
+    "calories": 222,
+    "portion": 200
+  },
+  {
+    "name": "Печінка куряча смажена",
+    "type": "main",
+    "unit": "грам",
+    "calories": 215,
+    "portion": 200
+  },
+  {
+    "name": "Сирний суп",
+    "type": "soup",
+    "unit": "грам",
+    "calories": 104,
+    "portion": 300
+  },
+  {
+    "name": "Борщ",
+    "type": "soup",
+    "unit": "грам",
+    "calories": 36,
+    "portion": 300
+  },
+  {
+    "name": "Солянка",
+    "type": "soup",
+    "unit": "грам",
+    "calories": 89,
+    "portion": 300
   }
 ]

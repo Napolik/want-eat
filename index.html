@@ -27,6 +27,10 @@
   <!-- Add your site or application content here -->
   <week-view>
     <div class="week">
+      <div class="week__buttons">
+        <input value="2000" id="calories" name="calories" type="text" placeholder="Calories per day">
+        <button class="create" name="create">Create</button>
+      </div>
       <div class="week__day">
         <div class="week__day-heading">Понеділок</div>
         <div class="week__meals">
@@ -50,7 +54,7 @@
   </week-view>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
