@@ -43,10 +43,6 @@ class WeekView extends HTMLElement {
     return dishes[Math.floor(Math.random()*dishes.length)];
   }
 
-  renderDayMenu(breakfast, dinner, supper) {
-
-  }
-
 }
 
 customElements.define('week-view', WeekView);
