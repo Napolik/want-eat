@@ -264,7 +264,7 @@ textarea {
 
 
 .week__day {
-  width: 200px;
+  width: 300px;
   border: 2px dashed lightslategrey;
   border-radius: 10px;
   padding: 10px;
@@ -285,3 +285,4 @@ textarea {
 .week__buttons {
   padding: 10px;
 }
+
