@@ -15,28 +15,36 @@ class WeekView extends HTMLElement {
   }
 
   createMenu() {
+    const dayCalories = document.createElement('div');
     const calories = this.querySelector('#calories').value;
     const dishesArray = Object.entries(dishes);
-
     const mainDishes = this.getDishesByType(dishesArray, 'main');
     const garnishDishes = this.getDishesByType(dishesArray, 'garnish');
     const soupDishes = this.getDishesByType(dishesArray, 'soup');
-
     const breakfast = [];
     const dinner = [];
     const supper = [];
 
     breakfast.push(this.getRandomDish(mainDishes)[1]);
-    breakfast.push(this.getRandomDish(garnishDishes)[1]);
+    if (this.getCalories(breakfast) < calories/3) {
+      breakfast.push(this.getRandomDish(garnishDishes)[1]);
+    }
+
     dinner.push(this.getRandomDish(soupDishes)[1]);
+
     supper.push(this.getRandomDish(mainDishes)[1]);
-    supper.push(this.getRandomDish(garnishDishes)[1]);
+    if (this.getCalories(supper) < calories/3) {
+      supper.push(this.getRandomDish(garnishDishes)[1]);
+    }
 
     this.querySelector('.week__meals').innerHTML = '';
     this.renderMenu(breakfast, 'Сніданок', this.getCalories(breakfast));
+    this.plusToDay(this.getCalories(breakfast));
     this.renderMenu(dinner, 'Обід', this.getCalories(dinner));
+    this.plusToDay(this.getCalories(dinner));
     this.renderMenu(supper, 'Вечеря', this.getCalories(supper));
-    const dayCalories = document.createElement('div');
+    this.plusToDay(this.getCalories(supper));
+
     dayCalories.innerHTML = 'Всього калорій: ' + this.dayCalories;
     this.querySelector('.week__meals').append(dayCalories);
     this.dayCalories = 0;
@@ -47,7 +55,6 @@ class WeekView extends HTMLElement {
     const mealHeading = document.createElement('div');
     const mealList = document.createElement('ul');
     const mealListItem = document.createElement('li');
-
     const caloriesContainer = document.createElement('div');
 
     mealHeading.classList.add('week__meal-heading');
@@ -70,13 +77,16 @@ class WeekView extends HTMLElement {
     this.querySelector('.week__meals').append(mealContainer);
   }
 
-  getCalories(breakfast) {
-    let calories = (breakfast[0].portion/100)*breakfast[0].calories;
-    if (breakfast[1]) {
-      calories = calories + (breakfast[1].portion/100)*breakfast[1].calories;
+  getCalories(meal) {
+    let calories = (meal[0].portion/100)*meal[0].calories;
+    if (meal[1]) {
+      calories = calories + (meal[1].portion/100)*meal[1].calories;
     }
-    this.dayCalories += calories;
     return calories;
+  }
+
+  plusToDay(calories) {
+    this.dayCalories += calories;
   }
 
   getDishesByType(dishes, type) {

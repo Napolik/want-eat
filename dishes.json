@@ -61,5 +61,26 @@
     "unit": "грам",
     "calories": 89,
     "portion": 300
+  },
+  {
+    "name": "Пельмені",
+    "type": "main",
+    "unit": "грам",
+    "calories": 250,
+    "portion": 300
+  },
+  {
+    "name": "Вареники з картоплею",
+    "type": "main",
+    "unit": "грам",
+    "calories": 170,
+    "portion": 400
+  },
+  {
+    "name": "Вареники з капустою",
+    "type": "main",
+    "unit": "грам",
+    "calories": 155,
+    "portion": 440
   }
 ]
