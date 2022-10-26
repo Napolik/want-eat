@@ -39,12 +39,12 @@ class WeekView extends HTMLElement {
 
     this.querySelector('.week__meals').innerHTML = '';
     this.renderMenu(breakfast, 'Сніданок', this.getCalories(breakfast));
-    this.plusToDay(this.getCalories(breakfast));
     this.renderMenu(dinner, 'Обід', this.getCalories(dinner));
-    this.plusToDay(this.getCalories(dinner));
     this.renderMenu(supper, 'Вечеря', this.getCalories(supper));
-    this.plusToDay(this.getCalories(supper));
 
+    this.plusToDay(this.getCalories(breakfast));
+    this.plusToDay(this.getCalories(dinner));
+    this.plusToDay(this.getCalories(supper));
     dayCalories.innerHTML = 'Всього калорій: ' + this.dayCalories;
     this.querySelector('.week__meals').append(dayCalories);
     this.dayCalories = 0;
