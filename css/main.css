@@ -288,4 +288,5 @@ textarea {
 .week__meals > div {
   border-bottom: 1px dashed grey;
   margin: 0 0 20px 0;
+  padding: 10px;
 }
